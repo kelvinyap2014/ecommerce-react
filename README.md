@@ -1,8 +1,10 @@
 # E-Commerce Grocery Storefront Sample
 
-This project demonstrates core **React Front-End Engineering** capabilities, focused on building hand-coded, maintainable UI architecture for e-commerce grocery and auto-replenishment systems using **TypeScript**, **Redux Toolkit (RTK)** for predictable state management, and **Tailwind CSS** for styling.
+This project demonstrates core **React Front-End Engineering** capabilities, focused on building maintainable UI architecture for e-commerce grocery systems using **TypeScript**, **Redux Toolkit (RTK)** for predictable state management, and **Tailwind CSS** for styling.
 
-This application highlights consumable catalog filtering, subscription schedule configuration, real-time pricing recalculations, and transparent state maintenance using Redux slices, async thunks, and strongly-typed selectors.
+This application highlights consumable catalog filtering, real-time pricing recalculations, and transparent state maintenance using Redux slices, async thunks, and strongly-typed selectors.
+
+[View the Grocery Storefront Sample](https://kelvinyap2014.github.io/ecommerce-react/)
 
 ## 1. Technical Stack & Architecture
 
