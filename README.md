@@ -498,3 +498,20 @@ yarn test --coverage
 # Build for Production
 yarn build
 ```
+
+#### 3. Docker & Container Deployment
+
+```bash
+cd apps/storefront
+
+# Build production image
+# Build production image (with optional custom API base URL)
+docker build \
+  --build-arg REACT_APP_API_BASE_URL=https://dummyjson.com \
+  -f Dockerfile -t grocer-store:latest .
+
+# Run container
+docker run -p 8080:8080 grocer-store:latest
+
+# Access at http://localhost:8080
+```

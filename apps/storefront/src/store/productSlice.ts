@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { Product, ProductsAPIResponse, ProductState } from '../types/grocery';
 
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 // Initial state for the product catalog
 const initialState: ProductState = {
   items: [],
@@ -17,12 +19,12 @@ export const fetchProducts = createAsyncThunk<
   { rejectValue: string }
 >('products/fetchProducts', async (params, { rejectWithValue }) => {
   try {
-    let url = 'https://dummyjson.com/products';
+    let url = `${BASE_URL}/products`;
 
     if (params?.query && params.query.trim() !== '') {
-      url = `https://dummyjson.com/products/search?q=${encodeURIComponent(params.query)}`;
+      url = `${BASE_URL}/products/search?q=${encodeURIComponent(params.query)}`;
     } else if (params?.category) {
-      url = `https://dummyjson.com/products/category/${encodeURIComponent(params.category)}`;
+      url = `${BASE_URL}/products/category/${encodeURIComponent(params.category)}`;
     }
 
     const response = await fetch(url);
