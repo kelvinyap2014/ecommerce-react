@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode development --open",
     "test": "jest",
     "build": "webpack --mode production",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
@@ -36,7 +36,7 @@
     "tailwindcss": "^4.3.3",
     "ts-jest": "^29.4.15",
     "ts-loader": "^9.6.2",
-    "typescript": "^7.0.2",
+    "typescript": "^5.6.0",
     "webpack": "^5.112.2",
     "webpack-cli": "^7.2.3",
     "webpack-dev-server": "^6.1.0"

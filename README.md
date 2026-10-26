@@ -468,6 +468,7 @@ yarn add -D eslint prettier eslint-config-prettier eslint-plugin-react eslint-pl
 
 ```bash
 cd apps/storefront
+yarn install
 
 # Start Development Server (watch mode)
 yarn start
