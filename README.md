@@ -469,14 +469,26 @@ yarn add -D eslint prettier eslint-config-prettier eslint-plugin-react eslint-pl
 ```bash
 cd apps/storefront
 
-# Installs Dependencies
-yarn install
-
-# Start Development Server
+# Start Development Server (watch mode)
 yarn start
+
+# Run Linter (ESLint)
+yarn lint
+
+# Fix Linting Issues
+yarn lint:fix
+
+# Check Code Formatting (Prettier)
+yarn format:check
+
+# Auto-format Code
+yarn format
 
 # Run Unit & Integration Tests
 yarn test
+
+# Run Tests with Coverage Report
+yarn test --coverage
 
 # Build for Production
 yarn build
