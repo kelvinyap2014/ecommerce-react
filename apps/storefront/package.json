@@ -2,7 +2,11 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "test": "jest",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,css,json,md}'",
+    "format:check": "prettier --check 'src/**/*.{ts,tsx,css,json,md}'"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.13.0",

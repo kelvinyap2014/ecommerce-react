@@ -1,0 +1,46 @@
+name: Build React Code
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/storefront/**'
+      - '.github/workflows/build-react.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'apps/storefront/**'
+      - '.github/workflows/build-react.yml'
+
+jobs:
+  lint-test-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/storefront
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Lint Code
+        run: yarn lint
+
+      - name: Check Code Formatting
+        run: yarn format:check
+
+      - name: Run Tests
+        run: yarn test --coverage
+
+      - name: Build Application
+        run: yarn build
