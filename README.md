@@ -467,6 +467,10 @@ yarn add -D eslint prettier eslint-config-prettier eslint-plugin-react eslint-pl
 #### 2. Run Application Commands
 
 ```bash
+# Enable husky git commit hook for eslint and prettier automation
+# at project root folder
+yarn install
+
 cd apps/storefront
 yarn install
 

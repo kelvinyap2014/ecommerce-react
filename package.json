@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-react",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0"
+  },
+  "lint-staged": {
+    "apps/storefront/src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "apps/storefront/src/**/*.{css,json,md}": [
+      "prettier --write"
+    ]
+  }
+}

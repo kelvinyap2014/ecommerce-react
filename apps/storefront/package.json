@@ -1,4 +1,5 @@
 {
+  "name": "grocer-store",
   "type": "module",
   "scripts": {
     "start": "webpack serve --mode development --open",
